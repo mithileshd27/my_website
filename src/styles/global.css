@@ -1,0 +1,73 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --photo-bg: #100d0a;
+  --photo-accent: #c8a97e;
+  --photo-text: #e8ddd0;
+  --code-bg: #060d12;
+  --code-accent: #00e5c0;
+  --code-text: #b8d4e8;
+  --split: #1a1a1a;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'DM Mono', monospace;
+}
+
+/* ── Page transition system ── */
+.page {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease;
+}
+
+.page.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Shared animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page.active .animate { animation: fadeUp 0.7s cubic-bezier(0.23, 1, 0.32, 1) both; }
+.page.active .a1 { animation-delay: 0.1s; }
+.page.active .a2 { animation-delay: 0.22s; }
+.page.active .a3 { animation-delay: 0.34s; }
+.page.active .a4 { animation-delay: 0.46s; }
+
+/* ── Shared back button ── */
+.back-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s;
+  padding: 8px 0;
+}
+.back-btn:hover { opacity: 0.6; }
+
+@media (max-width: 768px) {
+  .back-btn { top: 1.2rem; left: 1.2rem; }
+}
