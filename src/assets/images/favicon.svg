@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Tanker&amp;display=swap');</style>
+  </defs>
+  <rect width="64" height="64" rx="13" fill="#222831"/>
+  <text x="32" y="47" text-anchor="middle" fill="#ECECEC" font-family="Tanker, sans-serif" font-size="37" letter-spacing="-1.2">MD</text>
+</svg>
