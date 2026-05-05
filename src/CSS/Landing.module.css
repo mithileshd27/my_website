@@ -4,7 +4,7 @@
     font-family: 'Tanker', sans-serif;
     font-size: 5dvh;
     color: #222831;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     text-align: center;
 }
 
@@ -32,18 +32,58 @@
     flex-direction: row;
 }
 
-.middleLeft, .middleRight {
-    width: 50dvw;
+
+.middleLeft {
+    flex: 49;
+    transition: flex 0.3s ease;
+    overflow: hidden;
+}
+
+.middleLeft:hover {
+    flex: 65;
+}
+
+.middleRight {
+    flex: 51;
+    transition: flex 0.3s ease;
+    overflow: hidden;
+}
+
+.middleRight:hover {
+    flex: 65;
 }
 
 .middleLeft {
-    background: url("../assets/images/background.png");
+    background: url("../assets/images/codebackground.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
+.middleRight {
+    background-image: url("../assets/images/photobackground.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
 .contentCode {
-    height: 100%;
     width: 100%;
-    backdrop-filter: blur(5px);
+    padding: 30px;
+    padding-bottom: 80px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 /*
 .middleLeft:hover {
@@ -51,8 +91,30 @@
     transition: all 0.3s ease-in-out;
 }*/
 
-.codeTitle {
+.codeTitle, .photoTitle {
     color: #ECECEC;
-    font-family: 'JetBrains Mono', sans-serif;
     font-size: 10dvh;
+}
+
+.codeTitle {
+    font-family: 'JetBrains Mono', sans-serif;
+}
+
+.landingCodeText, .landingPhotoText {
+    color: #ECECEC;
+}
+
+.photoTitle {
+    font-family: 'Bespoke Stencil', sans-serif;
+}
+
+.contentPhoto {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 80px;
+    margin-top: auto;
+}
+
+.landingButtons {
+    box-shadow: 5px 5px 8px #888888;
 }
